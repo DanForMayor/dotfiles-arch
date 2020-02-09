@@ -39,7 +39,8 @@ while true; do
 		if [ "$?" -ne "0" ]; then
 			$(convert -resize 256x256 ~/Pictures/dunstIcons/defaultCover.jpg /tmp/cover.png)
 		fi
-
+		
+		# Call the popup script which calls dunst (or whatever notifier)
 		~/Scripts/song_notify/popup.sh
 	fi
 done

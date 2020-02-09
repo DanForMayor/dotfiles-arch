@@ -1,6 +1,7 @@
 #!/bin/sh
 #
 # ufetch-arch - tiny system info for arch
+# This one uses a custom ASCII made by ME
 
 ## INFO
 

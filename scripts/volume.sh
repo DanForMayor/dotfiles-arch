@@ -1,3 +1,9 @@
+#!/bin/bash
+
+# This is a script that is meant to alter volume, and send a dunst notification in response
+# Usage: volume.sh up|down|mute
+
+
 function get_volume {
   pamixer --get-volume
 }

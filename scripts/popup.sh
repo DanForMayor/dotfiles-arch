@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script is for the Dunst song notification script
+# it uses mpc and dunst to gather song data, and display it
+
 #This expects that the desired album art already exists, and has /tmp/cover.png as it's path
 
 
