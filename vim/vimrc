@@ -153,5 +153,6 @@ noremap <F2> :call SaveRunC()<CR>
 
 
 set tabstop=4
+set wrap linebreak nolist
 
 
