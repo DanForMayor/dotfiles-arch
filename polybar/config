@@ -313,7 +313,7 @@ icon-next = 
 icon-random = 
 label-song = %artist% - %title%
 
-label-song-maxlen = 35
+label-song-maxlen = 100
 label-song-ellipsis = true
 label-offline = 🎜 mpd is offline
 
