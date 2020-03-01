@@ -147,10 +147,15 @@ call plug#end()
 
 function! SaveRunC()
 	execute ':w'
-	execute ':!clear && gcc -o bin % && ./bin'
+	execute ':!clear && gcc -o bin -g % && ./bin'
 endfunction
 noremap <F2> :call SaveRunC()<CR>
 
+function! DebugC()
+	execute ':w'
+	execute ':!clear && gcc -o bin -g % && gdb bin'
+endfunction
+noremap <F3> :call DebugC()<CR>
 
 set tabstop=4
 set shiftwidth=4
