@@ -147,13 +147,13 @@ call plug#end()
 
 function! SaveRunC()
 	execute ':w'
-	execute ':!clear && gcc -o bin -g % && ./bin'
+	execute ':!clear && gcc -o out.bin -g % && ./out.bin'
 endfunction
 noremap <F2> :call SaveRunC()<CR>
 
 function! DebugC()
 	execute ':w'
-	execute ':!clear && gcc -o bin -g % && gdb bin'
+	execute ':!clear && gcc -o out.bin -g % && gdb out.bin'
 endfunction
 noremap <F3> :call DebugC()<CR>
 
