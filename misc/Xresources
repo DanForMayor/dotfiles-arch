@@ -27,36 +27,22 @@
 
 
 ! █▓▒░ fonts
-!URxvt*font: xft:GohuFont:size=8:antialias=true, \
-!URxvt*font: xft:gohufont:size=11:antialias=false
-!URxvt*font: -*-creep-regular-*-*--16-*-*-*-*-*-*-1
-!URxvt*font: -*-lime-*-*-*--11-*-*-*-*-*-*-1
-!URxvt*font: xft:creep:size=16:antialias=true
-!URxvt*font: xft:envy code r:size=9:antialias=false
-!URxvt*font: xft:lemon:size=16:antialias=false
-!URxvt*font: xft:lime:size=16:antialias=false
-!URxvt*font: xft:neep:size=11:antialias=false
-!URxvt*font: xft:perfect dos vga 437:size=11:antialias=false
-!URxvt*font: xft:tewi:size=11:antialias=false
-!URxvt*font: xft:Hack Nerd Font Mono:style=Regular:size=11:hinting=full, \
-!            xft:Symbola:size=11:antialias=true:hinting=full
-
-!URxvt*font: xft:FontAwesome:size=10:antialias=true
-!URxvt*font: xft:Siji:size=10:antialias=true
-!URxvt*font: xft:DejaVu Sans Mono:size=10:antialias=true
-URxvt*font: xft:Inconsolata:pixelsize=15:antialias=true,\
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=15:antialias=true,\
+!xft: FontAwesome:pixelsize=11:antialias=true,\
+!xft: Siji:pixelsize=11:antialias=true,\
+!xft: unifont:pixelsize=18:antialias=true
+URxvt*font: xft:SourceCodePro:pixelsize=12:antialias=true,\
 xft:FontAwesome:pixelsize=11:antialias=true,\
 xft:Siji:pixelsize=11:antialias=true,\
 xft:unifont:pixelsize=18:antialias=true
-
 
 !URxvt*boldfont: xft:Inconsolata:style=bold:size=12:antialias=true
 
 
 
-URxvt*boldFont: 
-URxvt*italicFont: 
-URxvt*bolditalicFont: 
+!URxvt*boldFont: 
+!URxvt*italicFont: 
+!URxvt*bolditalicFont: 
 
 !URxvt*letterSpace: -1
 URxvt*lineSpace: -1

@@ -70,6 +70,7 @@ function parse_git_dirty {
 
 export EDITOR="vim"
 export PS1="\[\e[42m\]\`parse_git_branch\`\[\e[m\] \[\e[31m\]♆\[\e[m\] \W \\$ "
+#export PS1="\[\e[42m\]\`parse_git_branch\`\[\e[m\] \[\e[31m\]λ\[\e[m\] \W \\$ "
 
 
 

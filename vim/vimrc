@@ -153,7 +153,7 @@ noremap <F2> :call SaveRunC()<CR>
 
 function! DebugC()
 	execute ':w'
-	execute ':!clear && gcc -o out.bin -g % && gdb out.bin'
+	execute ':!clear && gcc -o out.bin -g % && gdb -q out.bin'
 endfunction
 noremap <F3> :call DebugC()<CR>
 
