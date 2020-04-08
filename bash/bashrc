@@ -83,6 +83,7 @@ alias ll="ls -1"
 alias la="ls -la"
 alias pcr="sudo pacman -Rns \$(pacman -Qtdq)"
 alias pipes="pipes -f 60 -p 3 -s 8 -R"
+alias gdb="gdb -q"
 
 
 
