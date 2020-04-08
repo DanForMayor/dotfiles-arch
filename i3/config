@@ -182,6 +182,10 @@ exec_always --no-startup-id ~/Scripts/song_notify/prepareNotify.sh &
 # Remove that stupid title bar
 new_window 1pixel
 
+# Keymaps for adding or removing the title bar
+bindsym $mod+b border normal
+bindsym $mod+Shift+b border 1pixel
+
 # Keymaps for opening vertical or horizontal terminals
 bindsym $mod+apostrophe		split horizontal ;; exec $term
 bindsym $mod+slash		split vertical ;; exec $term
