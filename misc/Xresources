@@ -31,7 +31,7 @@
 !xft: FontAwesome:pixelsize=11:antialias=true,\
 !xft: Siji:pixelsize=11:antialias=true,\
 !xft: unifont:pixelsize=18:antialias=true
-URxvt*font: xft:SourceCodePro:pixelsize=12:antialias=true,\
+URxvt*font: xft:SourceCodePro:pixelsize=13:antialias=true,\
 xft:FontAwesome:pixelsize=11:antialias=true,\
 xft:Siji:pixelsize=11:antialias=true,\
 xft:unifont:pixelsize=18:antialias=true
@@ -107,8 +107,8 @@ URxvt.background: [80]#111111
 *color2:#287373
 *color10:#53A6A6
 !yellow
-*color3:#914E89
-*color11:#BF85CC
+*.color3:#5a7762
+*.color11:#84a08a
 !blue
 *color4:#18618f
 *color12:#1C86C5
