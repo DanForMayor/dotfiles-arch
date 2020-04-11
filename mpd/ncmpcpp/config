@@ -48,3 +48,6 @@ volume_color = 							"4"
 window_border_color = 					"white"
 active_window_border = 					"4"
 
+# Execute on song change:
+execute_on_song_change = "~/Scripts/ncmpcppSongChange.sh"
+

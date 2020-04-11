@@ -176,9 +176,6 @@ exec_always --no-startup-id ~/.config/compton/compton.sh
 # Custom bar -- polybar
 exec_always --no-startup-id ~/.config/polybar/polybar.sh
 
-# Custom song change notification script
-exec_always --no-startup-id ~/Scripts/song_notify/prepareNotify.sh &
-
 # Remove that stupid title bar
 new_window 1pixel
 
@@ -203,27 +200,18 @@ bindsym $mod+g gaps inner all set 10; gaps outer all set 5
 # Media keys
 #############
 
-# Custom script for displaying songs
-
-# Kill the script
-bindsym $mod+z exec --no-startup-id killall prepareNotify.sh > /dev/null 2>&1
-
-# Start the script
-bindsym $mod+Shift+z exec --no-startup-id ~/Scripts/song_notify/prepareNotify.sh > /dev/null 2>&1
-
-
 # Media scripts/commands
 set $volLower ~/.config/dunstVolumeScripts/volume.sh down
 set $volRaise ~/.config/dunstVolumeScripts/volume.sh up
 
 set $muteToggle ~/.config/dunstVolumeScripts/volume.sh mute
 
-set $player		ncmpcpp		# PLAYER START
-set $playToggle  	mpc toggle	# PLAY/PAUSE
-set $songNext		mpc next	# NEXT SONG
-set $songPrev		mpc prev	# PREV SONG
-set $songBack		mpc seek -10	# REWIND 10 SECONDS
-set $songFwrd		mpc seek +10	# FORWARD 10 SECONDS
+set $player			ncmpcpp								# PLAYER START
+set $playToggle  	~/Scripts/song_notify/toggle_mpd.sh	# PLAY/PAUSE
+set $songNext		mpc next							# NEXT SONG
+set $songPrev		mpc prev							# PREV SONG
+set $songBack		mpc seek -10						# REWIND 10 SECONDS
+set $songFwrd		mpc seek +10						# FORWARD 10 SECONDS
 
 
 
@@ -280,7 +268,7 @@ bindsym $mod+bracketright	exec --no-startup-id $songFwrd		# FORWARD 10 SECONDS
 
 
 # This is for forcing the song change popup, just to see the current song
-bindsym $mod+o			exec --no-startup-id Scripts/song_notify/popup.sh
+bindsym $mod+o			exec --no-startup-id Scripts/song_notify/mpd_notification.sh
 
 
 # Scroll through workspaces
