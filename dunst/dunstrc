@@ -87,7 +87,7 @@
     ### Text ###
 
     # font = DejaVu Sans Mono 10
-    font = Inconsolata 11
+    font = Source Code Pro 11
 
 
     # The spacing between lines.  If the height is smaller than the
@@ -162,7 +162,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = right
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 128
