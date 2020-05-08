@@ -283,6 +283,7 @@ bindsym Print exec --no-startup-id scrot
 # Default some stuff to floating
 for_window [class="feh"] floating enable
 for_window [class="mpv"] floating enable
+for_window [title="Microsoft Teams Notification"] floating enable
 
 # Colors
 client.focused #555555 #555555 #ffffff #2e9ef4     #336067
