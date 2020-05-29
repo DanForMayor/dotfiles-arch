@@ -276,8 +276,11 @@ bindsym --whole-window $mod+button5 workspace next_on_output
 bindsym --whole-window $mod+button4 workspace prev_on_output
 bindsym $mod+Tab workspace back_and_forth
 
-# scrot
-bindsym Print exec --no-startup-id scrot
+# screenshot
+# THIS USES A CUSTOM SCRIPT
+bindsym Print exec --no-startup-id Scripts/screenshot.sh
+bindsym $mod+Print exec --no-startup-id Scripts/screenshot.sh -s
+
 
 
 # Default some stuff to floating
