@@ -9,7 +9,7 @@ blur-kern = "7x7box";
  
 
 # Shadow
-shadow = false;			# Enabled client-side shadows on windows.
+shadow = true;			# Enabled client-side shadows on windows.
 no-dock-shadow = false;		# Avoid drawing shadows on dock/panel windows.
 no-dnd-shadow = false;		# Don't draw shadows on DND windows.
 clear-shadow = true;		# Zero the part of the shadow's mask behind the window (experimental).
@@ -39,10 +39,11 @@ shadow-opacity = 0.2;
 # #"class_g ?= 'Xfce4-power-manager'"
 #];
 
-#shadow-exclude = [
-#	"name = 'Polybar tray window'",
-#	"name = 'Polybar'"
-#]
+shadow-exclude = [
+	"name = 'Polybar tray window'",
+	"name = 'Polybar'",
+	"name = 'hacksaw'"
+]
 
 #blur-background-exclude = [
 # "name = 'gnome-screenshot'", 
@@ -53,9 +54,9 @@ blur-background-exclude = [
     "class_g = 'slop'"
 ];
 
-shadaw-exclude = [
-	"class_g ?= 'hacksaw'"
-]
+#shadaw-exclude = [
+#	"class_g ?= 'hacksaw'"
+#]
 
 #opacity-rule = ["85:class_g = 'gnome-terminal'"];
 opacity-rule = [
