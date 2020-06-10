@@ -9,9 +9,8 @@
 # The default image's location should be:
 # ~/Pictures/dunstIcons/defaultCover.jpg
 
-TMP_ART_PATH="/tmp/cover.png"
+TMP_ART_PATH="/tmp/cover"
 DEFAULT_ART_PATH="/home/dan/Pictures/dunstIcons/defaultCover.png"
-MUSIC_FOLDER="/home/dan/Music"
 
 # The only argument to this function is the path to the temp art
 function popup(){
@@ -35,18 +34,24 @@ function popup(){
 
 }
 
-# Get the absolute path to the current song
-songpath="$MUSIC_FOLDER/$(mpc status -f '%file%' | head -n1)"
+# Get the path to the album art
+artpath="/home/dan/Music/$(dirname "$(mpc status -f '%file%' | head -n1)")/cover.jpg"
 
 # remove old cover
 rm "$TMP_ART_PATH"
 
-# Attempt to extract art from song
-ffmpeg -i "$songpath" -vf scale=220:220 "$TMP_ART_PATH" > /dev/null 2>&1
 
 # If the convert failed, use a default kept in ~/Pictures/dunstIcons
-if [ $? -eq 1 ]; then
+if [ -f "$artpath" ]; then
+
+	# Convert the image to a sensible size
+	convert -resize 220x220 "$artpath" "$TMP_ART_PATH"
+
+else
+
+	# Convert the default image
 	convert -resize 220x220 "$DEFAULT_ART_PATH" "$TMP_ART_PATH"
+
 fi
 
 # Call the popup script which calls dunst (or whatever notifier)
