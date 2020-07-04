@@ -90,6 +90,9 @@ bindsym $mod+f fullscreen toggle
 # toggle tiling / floating
 bindsym $mod+space floating toggle
 
+# toggle sticky
+bindsym $mod+s sticky toggle
+
 # change focus between tiling / floating windows
 bindsym $mod+Shift+space focus mode_toggle
 
@@ -184,8 +187,8 @@ bindsym $mod+b border normal
 bindsym $mod+Shift+b border 1pixel
 
 # Keymaps for opening vertical or horizontal terminals
-bindsym $mod+apostrophe		split horizontal ;; exec $term
-bindsym $mod+slash		split vertical ;; exec $term
+bindsym $mod+apostrophe		split horizontal ;; exec $term -name tiled
+bindsym $mod+slash			split vertical ;; exec $term -name tiled
 
 # File Browser
 bindsym $mod+t exec --no-startup-id Thunar
@@ -286,6 +289,8 @@ bindsym $mod+Print exec --no-startup-id Scripts/screenshot.sh -s
 # Default some stuff to floating
 for_window [class="feh"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="URxvt"] floating enable
+for_window [class="URxvt" instance="tiled"] floating disable
 for_window [title="Microsoft Teams Notification"] floating enable
 
 # Colors
