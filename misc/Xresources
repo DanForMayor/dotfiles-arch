@@ -93,31 +93,40 @@ URxvt.geometry: 75x21
 
 [colors]
 
-*.foreground: #ffffff
-*.background: #111111
-URxvt.background: [80]#111111
+! special
+*.foreground:   #e3e3e3
+URxvt.background:   [80]#1a2026
+*.cursorColor:  #e3e3e3
 
-!black
-*color0:#282828
-*color8:#363636
-!red
-*color1:#8A2F58
-*color9:#CF4F88
-!green
-*color2:#287373
-*color10:#53A6A6
-!yellow
-*.color3:#5a7762
-*.color11:#84a08a
-!blue
-*color4:#18618f
-*color12:#1C86C5
-!magenta
-*color5:#5E468C
-*color13:#7F62B3
-!cyan
-*color6:#8CAFF0
-*color14:#9BBAF1
-!white
-*color7:#EDD8D1
-*color15:#FCEDE3
+! black
+*.color0:       #c3ccdf
+*.color8:       #a3b7d4
+
+! red
+*.color1:       #d1afaf
+*.color9:       #d69090
+
+! green
+*.color2:       #8d6d84
+*.color10:      #c3c897
+
+! yellow
+*.color3:       #c7a084
+*.color11:      #b4aee3
+
+! blue
+*.color4:       #91b2cd
+*.color12:      #9bacba
+
+! magenta
+*.color5:       #bfa8c7
+*.color13:      #819ea2
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #cf9086
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
