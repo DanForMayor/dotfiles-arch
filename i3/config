@@ -278,6 +278,7 @@ bindsym $mod+o			exec --no-startup-id Scripts/song_notify/mpd_notification.sh
 bindsym --whole-window $mod+button5 workspace next_on_output
 bindsym --whole-window $mod+button4 workspace prev_on_output
 bindsym $mod+Tab workspace back_and_forth
+bindsym Mod1+Tab workspace back_and_forth
 
 # screenshot
 # THIS USES A CUSTOM SCRIPT
