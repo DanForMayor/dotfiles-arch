@@ -18,9 +18,9 @@ function popup(){
 	
 	# this is meant to be sent to MPC to get the data, and arrange it nicely
 	form="
-<b>Artist:</b>	<span color='##a1b56c'>%artist%</span>
-<b>Album:</b>	<span color='##6a9fb5'>%album%</span>
-<b>Title:</b>	<span color='##ac4142'>%title%</span>
+<b>Artist:</b>	<span color='##6b59b3'>%artist%</span>
+<b>Album:</b>	<span color='##8859b3'>%album%</span>
+<b>Title:</b>	<span color='##9d55aa'>%title%</span>
 "
 
 	# Pull the mpc data using the form
