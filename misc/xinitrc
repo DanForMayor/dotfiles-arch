@@ -34,8 +34,8 @@ fi
 
 sh ~/.fehbg&
 
-killall nm-applet; nohup nm-applet &
-killall blueman-applet; nohup blueman-applet &
+killall nm-applet; nohup nm-applet >/dev/null 2>&1 &
+killall blueman-applet; nohup blueman-applet >/dev/null 2>&1 &
 
 
 exec xmousepasteblock 2> /dev/null &
