@@ -1,6 +1,6 @@
 ! polybar colours
-*.poly_bg:				#cc111111
-*.poly_bga:				#5E468C
+*.poly_bg:				#ef111111
+*.poly_bga:				#9d55aa
 *.poly_fg:				#ffffffff
 *.poly_fga:				#db555555
 *.poly_primary:			#dbffb52a
