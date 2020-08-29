@@ -22,7 +22,7 @@ primary = ${xrdb:poly_primary}
 secondary = ${xrdb:poly_secondary}
 alert = ${xrdb:poly_alert}
 
-[bar/example]
+[bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
 monitor = ${env:MONITOR:}
 ;bottom = false
@@ -66,15 +66,17 @@ module-margin-right = 1
 
 
 font-0 = SourceCodePro:pixelsize=10;1
-font-1 = FontAwesome:size=9;1
-font-2 = unifont:size=12:antialias=true;1
-font-3 = fixed:pixelsize=10;1
-font-4 = Siji:pixelsize=12;1
+font-1 = siji:pixelsize=12;1
+font-2 = FontAwesome:size=9;1
+font-3 = unifont:size=12:antialias=true;1
+font-4 = fixed:pixelsize=10;1
 
 
-modules-left = i3
-modules-center = date
-modules-right = mpd powermenu
+
+
+modules-left = i3 xwindow
+#modules-center = xwindow
+modules-right = eth wlan pulseaudio powermenu
 
 tray-position = right
 tray-padding = 2
@@ -91,6 +93,31 @@ wm-restack = i3
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
+[bar/bottom]
+monitor = ${env:MONITOR:}
+bottom = true
+height = 27
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+font-0 = SourceCodePro:pixelsize=10;1
+font-1 = siji:pixelsize=12;1
+font-2 = FontAwesome:size=9;1
+font-3 = unifont:size=12:antialias=true;1
+font-4 = fixed:pixelsize=10;1
+
+modules-left = mpd scrollScript
+#modules-center = mpd
+modules-right = date
 
 
 [module/alsa]
@@ -169,11 +196,29 @@ use-ui-max = true
 ; Default: 5
 interval = 5
 
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
 ; Available tags:
 ;   <label-volume> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume> <label-volume> <bar-volume>
 
 ; Available tags:
 ;   <label-muted> (default)
@@ -187,13 +232,13 @@ format-volume = <ramp-volume> <label-volume>
 
 ; Available tokens:
 ;   %percentage% (default)
-label-muted = 🔇 muted
+label-muted = " %percentage%% ──────────"
 label-muted-foreground = #666
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/xwindow]
 type = internal/xwindow
@@ -251,8 +296,6 @@ index-sort = true
 wrapping-scroll = false
 strip-wsnumbers = true
 
-
-
 ws-icon-1 = "1;ᚠ"
 ws-icon-2 = "2;ᚢ"
 ws-icon-3 = "3;ᚦ"
@@ -263,6 +306,17 @@ ws-icon-7 = "7;ᚷ"
 ws-icon-8 = "8;ᚹ"
 ws-icon-9 = "9;ᚻ"
 ws-icon-0 = "10;ᚾ"
+
+;ws-icon-1 = "1;"
+;ws-icon-2 = "2;"
+;ws-icon-3 = "3;"
+;ws-icon-4 = "4;"
+;ws-icon-5 = "5;"
+;ws-icon-6 = "6;"
+;ws-icon-7 = "7;"
+;ws-icon-8 = "8;"
+;ws-icon-9 = "9;"
+;ws-icon-0 = "10;"
 
 
 
@@ -298,11 +352,19 @@ label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
+[module/scrollScript]
+type = custom/script
+exec = ~/.config/polybar/scrollScript.sh
+tail = true
+interval = 0
+
+
 [module/mpd]
 type = internal/mpd
 ; format-online = <label-song> <bar-progress> <icon-prev> <icon-stop> <toggle> <icon-next> <icon-random>
 ; format-online =  [<label-time>]   <icon-prev><icon-stop><toggle><icon-next>  <label-song>
-format-online =  <label-song> [<label-time>] <icon-prev><icon-stop><toggle><icon-next>
+;format-online = "%{F#db555555}%{F-} <icon-prev><icon-stop><toggle><icon-next> <bar-progress> [<label-time>] <label-song>"
+format-online = "%{F#db555555}%{F-} <icon-prev><icon-stop><toggle><icon-next> <bar-progress> [<label-time>] "
 
 icon-prev = 
 icon-stop = 
@@ -323,7 +385,7 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
-; label-padding-right = 5
+; label-padding-left = 5
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -365,7 +427,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp4s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -390,8 +452,8 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
+#format-connected-underline = #55aa55
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = " : %downspeed%  : %upspeed%"
 
@@ -405,25 +467,25 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = ""
 date-alt = " %A, %B %d, %Y"
 
 time = %I:%M %p
 time-alt = %H:%M
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
 
 label = %date% %time%
-label-padding-right = 5
+label-padding-right = 2
 
 [module/volume]
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume = "VOL"
+label-volume-foreground = ${colors.foreground-alt}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
