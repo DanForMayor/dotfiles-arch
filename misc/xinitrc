@@ -40,6 +40,8 @@ killall blueman-applet; nohup blueman-applet >/dev/null 2>&1 &
 
 exec xmousepasteblock 2> /dev/null &
 
+/bin/bash "/home/dan/Scripts/mountDrives.sh"
+
 exec mpd 2> /dev/null & 
 exec i3
 

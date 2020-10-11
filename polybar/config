@@ -76,7 +76,7 @@ font-4 = fixed:pixelsize=10;1
 
 modules-left = i3 xwindow
 #modules-center = xwindow
-modules-right = eth wlan pulseaudio powermenu
+modules-right = eth pulseaudio powermenu
 
 tray-position = right
 tray-padding = 2
