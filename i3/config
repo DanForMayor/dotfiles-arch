@@ -11,7 +11,7 @@
 
 set $mod Mod4
 set $term urxvt
-set $browser firefox
+set $browser brave
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -189,6 +189,9 @@ bindsym $mod+Shift+b border 1pixel
 # Keymaps for opening vertical or horizontal terminals
 bindsym $mod+apostrophe		split horizontal ;; exec $term -name tiled
 bindsym $mod+slash			split vertical ;; exec $term -name tiled
+
+# Keymap for locking the screen
+bindsym $mod+BackSpace exec --no-startup-id ~/Scripts/lock.sh
 
 # File Browser
 bindsym $mod+t exec --no-startup-id Thunar

@@ -43,6 +43,8 @@ exec xmousepasteblock 2> /dev/null &
 /bin/bash "/home/dan/Scripts/mountDrives.sh"
 
 exec mpd 2> /dev/null & 
+
+numlockx &
 exec i3
 
 
