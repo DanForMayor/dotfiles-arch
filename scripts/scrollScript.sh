@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# This is for a custom polybar extension
+# I use it so that songs that are too long will get displayed within 40 characters of space
+
 zscroll --length 40 \
 		-p "        " \
 		--before-text "♪ x" --delay 0.2 \

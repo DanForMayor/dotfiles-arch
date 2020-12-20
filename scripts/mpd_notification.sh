@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# This script is meant to be called by ncmpcpp
+# This script is meant to be ONE OF the scripts called on song change
+# Another script wraps this one, and any others that need to run on song change
+#
 # It grabs the song's album art
 # (assuming it's a file in the same folder as the song that's
 # currently playing, and that it's called 'cover.jpg')

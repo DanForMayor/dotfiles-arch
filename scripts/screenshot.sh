@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# This is a little script that uses hacksaw and shotgun to operate
+# allows for full screencaps to be taken, or for specifically selected
+# screen regions to be captured
+
+# USAGE:
+#  - Region:	./THIS_SCRIPT -s
+#  - Full cap:	./THIS_SCRIPT
+
 filename=""
 
 if [[ $1 =~ ^-[sS]$ ]]; then

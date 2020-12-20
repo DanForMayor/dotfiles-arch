@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# this just locks the screen
+# takes a screencap, then blurs it, and adds a little icon image on top
+# then calls i3lock
+
 TMPBG=/tmp/screen.png
 LOCK=$HOME/Pictures/lock.png
 RES=$(xrandr | grep 'current' | sed -E 's/.*current\s([0-9]+)\sx\s([0-9]+).*/\1x\2/')

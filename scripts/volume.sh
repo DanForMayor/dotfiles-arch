@@ -33,6 +33,7 @@ function toggle_mute {
 function send_notification {
 
   # these are the two icon paths
+  # change these if other icons are needed
   iconSound="~/Pictures/dunstIcons/speaker-icon-grey.png"
   iconMuted="~/Pictures/dunstIcons/speaker-icon-grey-mute.png"
 
