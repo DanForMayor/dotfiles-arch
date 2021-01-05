@@ -19,6 +19,10 @@ if type "xrandr"; then
 
 	polybar --reload "$bar"&
 	bar="bottom"
+
+
+	#polybar --reload "top"&
+	#polybar --reload "bottom"&
   done
 else
   polybar --reload example &

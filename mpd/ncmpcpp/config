@@ -28,11 +28,18 @@ progressbar_look = 						"─╼─"
 
 # Visualizer:
 visualizer_output_name = 				"visualizer"
-visualizer_in_stereo = 					"no"
-visualizer_fifo_path = 					"/tmp/mpd.fifo"
-visualizer_sync_interval = 				"20"
+#visualizer_in_stereo = 					"no"
+visualizer_in_stereo = 					"yes"
+#visualizer_fifo_path = 					"/tmp/mpd.fifo" # This is depricated
+visualizer_data_source = 				"/tmp/mpd.fifo"
+#visualizer_sync_interval = 				"20" # Depricated
 visualizer_type = 						"spectrum"
 visualizer_look = 						"▁▋"
+visualizer_fps =						120
+visualizer_autoscale =					"yes"
+visualizer_spectrum_smooth_look =		"yes"
+visualizer_spectrum_dft_size =			2
+
 
 
 # Color:
@@ -43,7 +50,7 @@ main_window_color = 					"white"
 header_window_color = 					"4"
 progressbar_color = 					"cyan"
 statusbar_color = 						"red"
-active_column_color = 					"white"
+#active_column_color = 					"white"# THIS IS DEPRICATED
 volume_color = 							"4"
 window_border_color = 					"white"
 active_window_border = 					"4"
