@@ -91,7 +91,9 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+space floating toggle
 
 # toggle sticky
-bindsym $mod+s sticky toggle
+#bindsym $mod+s sticky toggle
+bindsym $mod+s exec --no-startup-id Scripts/screenshot.sh -s
+bindsym $mod+Shift+s exec --no-startup-id Scripts/screenshot.sh
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+space focus mode_toggle
