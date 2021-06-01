@@ -27,8 +27,9 @@ if [[ $1 = "all" ]]; then
 		-video_size $size \
 		-framerate 60 \
 		-f x11grab \
+		-thread_queue_size 512 \
 		-i :0.0+$offX,$offY \
-		-f pulse -ac 2 -i duplex_out.monitor output.webm
+		-f pulse -ac 2 -i duplex_out.monitor output.mp4
 
 elif [[ $1 = "nomic" ]]; then
 	# ONLY APPLICATIONS OR NOTHING
@@ -36,8 +37,9 @@ elif [[ $1 = "nomic" ]]; then
 		-video_size $size \
 		-framerate 60 \
 		-f x11grab \
+		-thread_queue_size 512 \
 		-i :0.0+$offX,$offY \
-		-f pulse -ac 2 -i application_out.monitor output.webm
+		-f pulse -ac 2 -i application_out.monitor output.mp4
 
 else
 	echo "invalid mode (all/nomic)"
