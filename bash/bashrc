@@ -84,9 +84,8 @@ alias pcr="sudo pacman -Rns \$(pacman -Qtdq)"
 alias pipes="pipes -f 60 -p 3 -s 8 -R"
 alias gdb="gdb -q"
 alias goSong='cd "/home/dan/Music/$(dirname "$(mpc status -f "%file%" | head -n1)")"'
-alias sshpi="ssh pi@192.168.0.25"
 alias mountDrive="systemctl --user start rclone@personal.service"
-
+alias scanNetwork="sudo nmap -sn 192.168.0.0/24"
 
 
 
